@@ -116,7 +116,7 @@ The purpose of this lab is to both get you familiar with using these non-github 
     | T(n) = T(n/2) + n    | $\Theta( n                  )$ | runtime of the bad binary search          |
     | T(n) = T(n/2) + 1    | $\Theta( \log n             )$ | runtime of the correct binary search      |
     | T(n) = T(n/3) + 1    | $\Theta( \log n             )$ | runtime of "trinary search"               |
-    | T(n) = 2T(n/2) + 1   | $\Theta( n\log n            )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
+    | T(n) = 2T(n/2) + 1   | $\Theta( n                  )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
     | T(n) = 2T(n/2) + n   | $\Theta( n\log n            )$ | runtime of merge sort                     |
     | T(n) = 3T(n/3) + n   | $\Theta( n\log n            )$ | runtime of a trinary merge sort           |
     | T(n) = T(n/2) + n^2  | $\Theta( n^2                )$ |                                           |
