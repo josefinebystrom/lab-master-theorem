@@ -66,10 +66,10 @@ The purpose of this lab is to both get you familiar with using these non-github 
         Modify the README file to include:
     
         1. The recurrence relation that describes the function's runtime:
-            $$T(n) = aT(n/b) + f(n)$$
+            $$T(n) = T(n/3) + O(1)$$
 
         1. The solution to the recurrence you wrote above as provided by the master theorem:
-            $$T(n) = \Theta()$$
+            $$T(n) = \Theta(n)$$
 
         (Feel free to check your answers with me before moving on.)
     
@@ -82,29 +82,29 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
         |                | `binary_search`           | `trinary_search`      |
         | -------------- | ------------------------- | --------------------- | 
-        | `n=2**0`       |                           |                       |
-        | `n=2**1`       |                           |                       |
-        | `n=2**2`       |                           |                       |
-        | `n=2**3`       |                           |                       |
-        | `n=2**4`       |                           |                       |
-        | `n=2**5`       |                           |                       |
-        | `n=2**6`       |                           |                       |
-        | `n=2**7`       |                           |                       |
-        | `n=2**8`       |                           |                       |
-        | `n=2**9`       |                           |                       |
-        | `n=2**10`      |                           |                       |
-        | `n=2**11`      |                           |                       |
-        | `n=2**12`      |                           |                       |
-        | `n=2**13`      |                           |                       |
-        | `n=2**14`      |                           |                       |
-        | `n=2**15`      |                           |                       |
-        | `n=2**16`      |                           |                       |
-        | `n=2**17`      |                           |                       |
-        | `n=2**18`      |                           |                       |
-        | `n=2**19`      |                           |                       |
-        | `n=2**20`      |                           |                       |
-        | `n=2**21`      |                           |                       |
-        | `n=2**22`      |                           |                       |
+        | `n=2**0`       | 0.775 usec                | 1.84 usec             |
+        | `n=2**1`       | 1.43 usec                 | 3.38 usec             |
+        | `n=2**2`       | 2.2 usec                  | 3.31 usec             |
+        | `n=2**3`       | 2.37 usec                 | 3.59 usec             |
+        | `n=2**4`       | 2.94 usec                 | 0.657 usec            |
+        | `n=2**5`       | 3.62 usec                 | 3.24 usec             |
+        | `n=2**6`       | 3.98 usec                 | 6.46 usec             |
+        | `n=2**7`       | 4.49 usec                 | 6.1 usec              |
+        | `n=2**8`       | 5.24 usec                 | 7.7 usec              |
+        | `n=2**9`       | 5.65 usec                 | 4.76 usec             |
+        | `n=2**10`      | 6.5 usec                  | 7.73 usec             |
+        | `n=2**11`      | 6.92 usec                 | 9.01 usec             |
+        | `n=2**12`      | 7.53 usec                 | 10.1 usec             |
+        | `n=2**13`      | 8.62 usec                 | 10.6 usec             |
+        | `n=2**14`      | 8.81 usec                 | 13.6 usec             |
+        | `n=2**15`      | 8.99 usec                 | 13.1 usec             |
+        | `n=2**16`      | 9.42 usec                 | 15.5 usec             |
+        | `n=2**17`      | 10.2 usec                 | 14.8 usec             |
+        | `n=2**18`      | 10.4 usec                 | 17.2 usec             |
+        | `n=2**19`      | 12 usec                   | 13.4 usec             |
+        | `n=2**20`      | 12.4 usec                 | 18.9 usec             |
+        | `n=2**21`      | 12.9 usec                 | 18.8 usec             |
+        | `n=2**22`      | 12.8 usec                 | 18.8 usec             |
 
 
 1. Use the master theorem to solve the following recurrence relations,
@@ -113,7 +113,7 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
     | recurrence           | solution                       | practical application                     |
     | -------------------- | ------------------------------ | ----------------------------------------- |
-    | T(n) = T(n/2) + n    | $\Theta(                    )$ | runtime of the bad binary search          |
+    | T(n) = T(n/2) + n    | $\Theta( \log _{2} n        )$ | runtime of the bad binary search          |
     | T(n) = T(n/2) + 1    | $\Theta(                    )$ | runtime of the correct binary search      |
     | T(n) = T(n/3) + 1    | $\Theta(                    )$ | runtime of "trinary search"               |
     | T(n) = 2T(n/2) + 1   | $\Theta(                    )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
